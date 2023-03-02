@@ -1,0 +1,17 @@
+{
+    "dev": {
+        "app_function": "apps2.f",
+        "keep_warm": false,
+        "role_name": "LabRole",
+        "manage_roles": false,
+        "apigateway_enabled": false,
+        "aws_region": "us-east-1",
+        "project_name": "taller-parte2",
+        "runtime": "python3.8",
+        "s3_bucket": "zappa-3aaleobqb"
+        "events": [{
+                "function": "apps2.f", // The function to execute
+                "expressions": ["cron(44 20 * * ? *)"] // When to execute it (in cron or rate format)
+            }]
+    }
+}
